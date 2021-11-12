@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BarberShop</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,6 +17,7 @@
     <body>
         <!--HEADER-->
         <header class="header">
+            <div class="header-box container">
             <nav class="header-nav">
                 <a href="" class="header-logo"><img src="./img/logo.svg" alt="Лого сайта" /></a>
                 <ul class="header-list list">
@@ -27,12 +29,16 @@
                     <li class="header-item"><a href="" class="header-link link">Контакты</a></li>
                 </ul>
             </nav>
+            <div class="head-contacts-box">
             <a href="tel:+380441111111" class="tel link">+38 044 111 11 11</a>
             <button type="button" class="btn header-btn">онлайн-запись</button>
+            </div>
+            </div>
         </header>
         <main>
             <!--HERO-->
             <section>
+                <div class="hero-box container">
                 <ul class="social-list list">
                     <li><a href="" class="social-link link">Instagram</a></li>
                     <li><a href="" class="social-link link">Youtube</a></li>
@@ -45,10 +51,12 @@
                         вкусом.
                     </p>
                 </div>
+                </div>
             </section>
             <!--ABOUT US-->
             <section class="about">
-                <ul class="about-list list">
+                <div class="about-box container">
+                    <ul class="about-list list">
                     <li class="about-item">
                         <img src="./img/aboutus1.jpg" alt="Бритьё" width="270" height="445" />
                     </li>
@@ -71,12 +79,15 @@
                     </p>
                     <button type="button" class="about-btn btn">онлайн-запись</button>
                 </div>
+                </div>
             </section>
             <!--PRICES-->
             <section class="prices">
-                <p class="prices-pretitle">Проведи время в компании лучших мастеров</p>
+                <div class="prices-box container">
+                    <p class="prices-pretitle">Проведи время в компании лучших мастеров</p>
                 <h2 class="prices-title">Услуги и цены</h2>
-                <ul class="prices-list list">
+                <div class="prices-card">
+                    <ul class="prices-list list">
                     <li class="prices-item">
                         <p class="prices-text">Мужская стрижка</p>
                         <span class="prices-span">от 300 грн.</span>
@@ -112,10 +123,13 @@
                         <span class="prices-span">от 200 грн.</span>
                     </li>
                 </ul>
+                </div>
                 <button type="button" class="prices-btn btn">онлайн-запись</button>
+                </div>
             </section>
             <!--STATISTICS-->
             <section class="reasons">
+                <div class="reasons-box container">
                 <ul class="reasons-list list">
                     <li class="reasons-item">
                         <span class="reasons-span">600</span>
@@ -142,9 +156,11 @@
                         10 раз прочитать.
                     </p>
                 </div>
+                </div>
             </section>
             <!--MASTERS-->
             <section class="masters">
+                <div class="masters-box container">
                 <p class="masters-pretitle">для настоящих ценителей атмосферы</p>
                 <h2 class="masters-title">Наши мастера</h2>
                 <ul class="masters-list list">
@@ -155,7 +171,8 @@
                             width="370"
                             height="346"
                         />
-                        <h3 lang="en" class="masters-name">John Smith</h3>
+                        <div class="masters-item-text">
+                            <h3 lang="en" class="masters-name">John Smith</h3>
                         <p lang="en" class="masters-name-text">Extreme Barber</p>
                         <ul>
                             <li><a href=""></a>inst</li>
@@ -163,6 +180,7 @@
                             <li><a href=""></a>face</li>
                             <li><a href=""></a>in</li>
                         </ul>
+                        </div>
                     </li>
                     <li class="masters-item">
                         <img
@@ -171,6 +189,7 @@
                             width="370"
                             height="346"
                         />
+                        <div class="masters-item-text">
                         <h3 lang="en" class="masters-name">Michele Doe</h3>
                         <p lang="en" class="masters-name-text">Extreme Barber</p>
                         <ul>
@@ -179,6 +198,7 @@
                             <li><a href=""></a>face</li>
                             <li><a href=""></a>in</li>
                         </ul>
+                        </div>
                     </li>
                     <li class="masters-item">
                         <img
@@ -187,6 +207,7 @@
                             width="370"
                             height="346"
                         />
+                        <div class="masters-item-text">
                         <h3 lang="en" class="masters-name">Alan Black</h3>
                         <p lang="en" class="masters-name-text">Extreme Barber</p>
                         <ul>
@@ -197,9 +218,12 @@
                         </ul>
                     </li>
                 </ul>
+                </div>
+                </div>
             </section>
             <!--GALLERY-->
             <section>
+                <div class="gallery-box container">
                 <p class="gallery-pretitle">На латинском языке “барба” означает “борода”</p>
                 <h2 hidden>Галерея</h2>
                 <ul class="gallery-list list">
@@ -236,6 +260,7 @@
                         />
                     </li>
                 </ul>
+                </div>
             </section>
             <!--ЗАПИСЬ-->
             <section>

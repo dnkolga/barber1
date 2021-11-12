@@ -1,3 +1,24 @@
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+img {
+  display: block;
+
+}
+
 :root {
   --main-title-color: #ffffff;
   --second-title-color: #303030;
@@ -10,19 +31,70 @@
   --second-button-color: #303030;
   --accent-color: #ff6c00;
 }
+/* COMMON */
 body {
   font-family: 'Open Sans', 'sans-serif';
 }
-.list {
-  list-style: none;
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 2px rebeccapurple;
 }
-.link {
-  text-decoration: none;
-  font-style: normal;
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  padding: 12px 20px 12px 20px;
+  border-radius: 25px;
+}
+.about-pretitle,
+.about-title,
+.about-after-title,
+.hero-pretitle,
+.hero-title,
+.masters-pretitle {
+  margin-bottom: 20px;
+}
+.prices-box, 
+.reasons-box,
+.masters-box,
+.gallery-box {
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 /* HEADER */
 header {
   background-color: var(--first-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-box {
+  display: flex;
+} 
+.header-list {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+}
+.head-contacts-box {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 70px;
+}
+.header-item:not(:last-child) {
+  margin-right: 40px;
 }
 .header-link {
   font-weight: 600;
@@ -35,24 +107,25 @@ header {
 .header-link:focus {
   color: var(--accent-color);
 }
-.header-tel {
+.tel {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--header-text-color);
+
+  margin-right: 40px;
 }
+
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--second-button-color);
+    color: var(--second-button-color);
 }
 /* HERO */
+.hero-box {
+  display: flex;
+}
+
 .hero-link {
   font-weight: 600;
   font-size: 11px;
@@ -84,6 +157,17 @@ header {
   line-height: 1.66;
   letter-spacing: 0.02em;
 }
+.hero-block {
+  background-color: grey;
+  padding-top: 272px;
+  padding-bottom: 272px;
+  padding-left: 92px;
+  padding-right: 452px;
+}
+.social-list {
+  display: flex;
+  /* align-items: flex-end; */
+}
 /* ABOUT */
 .about-pretitle {
   font-weight: 600;
@@ -112,16 +196,31 @@ header {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: var(--fourth-text-color);
+  margin-bottom: 40px;
 }
 .about-btn {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--second-button-color);
 }
+.about-box,
+.about-list {
+  display: flex;
+}
+.about-box {
+  padding-top: 139px;
+  padding-bottom: 121px;
+  padding-right: 52px;
+}
+.about-list {
+  margin-right: 64px;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* PRICES */
+.prices-box {
+  background-color: grey;
+}
 .prices-pretitle {
   font-weight: 600;
   font-size: 11px;
@@ -146,13 +245,14 @@ header {
   color: var(--second-text-color);
 }
 .prices-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--first-button-color);
+}
+.prices-list {
+  border: black solid 1px;
+  padding: 30px 40px 30px 40px;
+}
+.prices-card {
+  display: flex;
 }
 /* REASONS */
 .reasons-span {
@@ -192,6 +292,8 @@ header {
   letter-spacing: 0.02em;
   color: var(--fourth-text-color);
 }
+
+
 /* MASTERS */
 .masters-pretitle {
   font-weight: 600;
@@ -209,6 +311,36 @@ header {
   letter-spacing: 0.05em;
   color: var(--third-text-color);
 }
+.masters-list {
+  display: flex;
+  margin-right: -30px;
+}
+.masters-item {
+  margin-right: 30px;
+}
+
+.masters-title {
+  margin-bottom: 44px;
+}
+.masters-item img,
+.masters-name-text {
+  margin-bottom: 30px;
+}
+.masters-name {
+  padding-bottom: 8px;
+}
+.masters-item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.masters-item ul {
+  display: flex;
+  margin-right: -10px;
+}
+.masters-item ul li {
+  margin-right: 10px;
+}
 /* GALLERY */
 .gallery-pretitle {
   font-weight: 600;
@@ -217,7 +349,20 @@ header {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--third-text-color);
+
+  margin-bottom: 44px;
 }
+.gallery-list {
+  display: flex;
+  margin-left: -30px;
+    margin-top: -30px;
+}
+.gallery-list li {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
 /* ONLINE */
 .online {
   font-family: 'Raleway';
