@@ -255,7 +255,13 @@ header {
 
 /* PRICES */
 .prices {
-  background-color: grey;
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: var(--background-black);
+  background-image: url(../img/prices-bgi.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .prices-pretitle {
