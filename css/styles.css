@@ -70,7 +70,6 @@ body {
 .prices-pretitle,
 .reasons-r-pretitle,
 .reasons-r-title,
-.reasons-list,
 .prices-item:not(:last-child),
 .contacts-item:not(:last-child),
 .contacts-worktime {
@@ -94,6 +93,7 @@ body {
 .masters-item ul,
 .gallery-list,
 .contacts-box,
+.contacts-item,
 .footer-box,
 .footer-list {
   display: flex;
@@ -101,10 +101,23 @@ body {
 .prices, 
 .reasons,
 .masters,
+.reasons,
 .gallery {
   padding-top: 130px;
   padding-bottom: 130px;
 }
+.hero-pretitle,
+.about-pretitle,
+.prices-pretitle,
+.reasons-r-pretitle,
+.masters-pretitle,
+.gallery-pretitle,
+.contacts-worktime,
+.footer-item:first-child {
+  display: flex;
+  align-items: center;
+}
+
 .hero-pretitle::before,
 .about-pretitle::before,
 .prices-pretitle::before,
@@ -114,26 +127,21 @@ body {
 .contacts-worktime::before,
 .footer-item:first-child::before {
   content: '';
-  display: inline-block;
-  background-image: url(../img/before-line.svg);
   height: 1px;
   width: 60px;
-  margin-right: 21px;
-  margin-top: 3px;
-  margin-bottom: 3px;
-  
+  margin-right: 20px;
 }
 .about-pretitle::before,
 .reasons-r-pretitle::before,
 .masters-pretitle::before,
 .gallery-pretitle::before,
-.contacts-worktime::before,
-.footer-item:first-child::before {
-  fill: rgb(48, 48, 48);
+.contacts-worktime::before {
+  background-color: rgb(48, 48, 48);
 }
+.footer-item:first-child::before,
 .hero-pretitle::before,
 .prices-pretitle::before {
-  fill: var(--first-text-color)
+  background-color: var(--first-text-color);
 }
 
 /* HEADER */
@@ -279,12 +287,8 @@ header {
   width: 1280px;
   margin-right: auto;
   margin-left: auto;
+  background-image: url(../img/prices-bgi.png);
   background-color: var(--background-black);
-  background-image: linear-gradient(
-    to bottom,
-    rgba(17, 19, 25, .7),
-    rgba(17, 19, 25, .7)),
-    url(../img/prices-bgi.jpg); 
   background-size: cover;
   background-position: center;
 }
@@ -344,7 +348,6 @@ header {
   margin-bottom: 50px;
 }
 /* REASONS */
-
 .reasons-span {
   font-weight: 700;
   font-size: 42px;
@@ -392,11 +395,10 @@ header {
   letter-spacing: 0.02em;
   color: var(--fourth-text-color);
 }
-/* FIX!!!! */
-
 .statistics {
+  padding-right: 130px;
   padding-left: 100px;
-  width: 50%;
+  width: calc(50%-30px);
 }
 .reasons-item {
   flex-direction: column;
@@ -413,8 +415,8 @@ header {
 .reasons-item:nth-child(odd) {
   margin-right: 30px;
 }
-.reasons-item:nth-child(-n+2) {
-  margin-bottom: 30px;
+.reasons-item:nth-child(even) {
+  margin-top: 30px;
 }
 .reasons-list {
   flex-wrap: wrap;
@@ -422,7 +424,7 @@ header {
 }
 .reasons-right {
   padding-right: 115px;
-  width: 50%;
+  width: calc(50%-30px);
 }
 
 
@@ -453,9 +455,6 @@ header {
 .masters-item {
   margin-right: 30px;
 }
-/* .masters-item:hover {
-  box-shadow: 21px 23px 23px -11px rgba(34, 60, 80, 0.26);
-} */
 
 .masters-title,
 .prices-title,
@@ -481,21 +480,25 @@ header {
 }
 .masters-soc-list li {
   margin-right: 10px;
-}
-.masters-soc-list li a {
-  display: block;
   width: 44px;
   height: 44px;
   background-color: var(--header-text-color);
   border-radius: 50%;
+}
+.masters-soc-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 50%;
   padding: 12px;
 }
-.masters-soc-list li svg {
+.masters-soc-icon {
   width: 20px; height: 20px;
   fill: var(--second-title-color);
-  /* padding: 12px; */
 }
-.masters-soc-list li svg:hover {
+
+.masters-soc-link:hover .masters-soc-icon {
   fill: var(--accent-color);
 }
 
@@ -520,20 +523,14 @@ header {
   padding-top: 130px;
   padding-bottom: 130px;
   background-color: var(--background-black);
-  background-image: linear-gradient(
-    to bottom, 
-    rgba(23, 26, 36, .7), 
-    rgba(23, 26, 36, .6)),
-    url(../img/contact-bgi.jpg);
+  background-image: url(../img/contact-bgi.png);
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: 655px;
 }
 .form-box {
   width: 600px;
-
 }
-
 .form-title {
   font-family: 'Raleway';
   font-weight: 700;
@@ -543,6 +540,11 @@ header {
   color: var(--header-text-color);
 
   margin-bottom: 232px;
+}
+.form-btn {
+  background-color: transparent;
+  color: var(--first-button-color);
+  padding: 12px 38px;
 }
 /* CONTACTS */
 
@@ -569,6 +571,10 @@ header {
 .contacts-link:focus {
   color:var(--main-title-color);
 }
+.contacts-link:hover .contacts-icon,
+.contacts-link:focus .contacts-icon {
+  stroke:var(--main-title-color);
+}
 .contacts-worktime {
   font-weight: 600;
   font-size: 11px;
@@ -576,7 +582,6 @@ header {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--main-title-color);
-
 }
 .contacts-list {
   margin-bottom: 70px;
@@ -587,7 +592,17 @@ header {
   letter-spacing: 0.02em;
   color: var(--second-text-color);
 }
-
+.contacts-item:last-child .contacts-link {
+  text-decoration: underline;
+}
+.contacts-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  stroke: var(--first-text-color);
+  fill: transparent;
+  align-self: baseline;
+}
 /* FOOTER */
 .footer {
   padding-top: 57px;
