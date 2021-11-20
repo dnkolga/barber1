@@ -46,7 +46,7 @@ body {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  /* border: solid 2px rebeccapurple; */
+  border: solid 2px rebeccapurple;
 }
 .btn {
   display: block;
@@ -188,12 +188,15 @@ header {
 .header-btn {
     color: var(--second-button-color);
 }
+
 /* HERO */
 .hero {
-  padding-top: 188px;
-  padding-bottom: 206px;
-  padding-right: 452px;
-  padding-left: 96px;
+
+}
+
+.hero-box {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .hero-link {
@@ -229,11 +232,16 @@ header {
   color: var(--first-text-color);
 }
 .hero-block {
-  background-color: rgb(0, 0, 0);
-  padding-top: 272px;
+  width: 1077px;
+  padding-top: 154px;
   padding-bottom: 272px;
-  padding-left: 92px;
-  padding-right: 452px;
+  padding-left: 96px;
+  background-color: rgb(0, 0, 0);
+}
+.social-list {
+  flex-direction: column;
+  width: 97px;
+  outline: solid 2px rebeccapurple;
 }
 
 /* ABOUT */
